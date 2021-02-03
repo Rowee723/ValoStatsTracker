@@ -24,5 +24,10 @@ namespace ValoStatsTrackerApp
         {
             InitializeComponent();
         }
+
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Hello {UsernameText.Text}");
+        }
     }
 }
