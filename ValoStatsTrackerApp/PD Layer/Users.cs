@@ -8,7 +8,7 @@ namespace ValoStatsTrackerApp.PD_Layer
 {
     public class Users
     {
-        private string userID;
+        private string userID; //PK
         private string userName;
 
         public Users(string userID, string userName)
@@ -16,7 +16,7 @@ namespace ValoStatsTrackerApp.PD_Layer
             UserID = userID;
             UserName = userName;
         }
-
+        
         public string UserID
         {
             get { return userID; }

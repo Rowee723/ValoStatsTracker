@@ -59,6 +59,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DA Layer\agentsDA.cs" />
+    <Compile Include="DA Layer\mapsDA.cs" />
+    <Compile Include="DA Layer\player_statsDA.cs" />
+    <Compile Include="Tables\agents.cs" />
+    <Compile Include="Tables\maps.cs" />
+    <Compile Include="Tables\player_stats.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
