@@ -43,8 +43,13 @@ namespace ValoStatsTrackerApp
             // User Message Box
             string userID = UsernameText.Text;
 
-            //Users aUser = UsersDA.RetriveUser(userID);
-            // MessageBox.Show($"Welcome {aUser.UserName}");
+            Users aUser = UsersDA.RetriveUser(userID);
+            if(aUser != null) {
+                MessageBox.Show($"Welcome {aUser.UserName}");
+            }
+            else {
+                MessageBox.Show($"Invalid Player ID! Try Again!");
+            }
             */
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,8 +59,14 @@ namespace ValoStatsTrackerApp
             string battleTag = UsernameText.Text;
             int iBattleTag = Int32.Parse(battleTag);
 
-            //player_stats aPlayer = player_statsDA.GetPlayerStats(iBattleTag);
-            //MessageBox.Show($" Name: {aPlayer.Name} \n Rank Points: {aPlayer.RankPoints} \n Kill Count: {aPlayer.KillCount} \n Death Count: {aPlayer.DeathCount}");
+            player_stats aPlayer = player_statsDA.GetPlayerStats(iBattleTag);
+            if(aPlayer != null ){
+                MessageBox.Show($" Name: {aPlayer.Name} \n Rank Points: {aPlayer.RankPoints} \n Kill Count: {aPlayer.KillCount} \n Death Count: {aPlayer.DeathCount}");
+            }
+
+            else {
+                MessageBox.Show($"Invalid Player ID! Try Again!");
+            }
             */
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,7 +87,7 @@ namespace ValoStatsTrackerApp
             */
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            
+
             /*
             // outputs map table query
             string mapName = UsernameText.Text;
@@ -90,9 +101,61 @@ namespace ValoStatsTrackerApp
             }
             */
 
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+            /*
+            // outputs weapon table query
+            string weaponName = UsernameText.Text;
+            weapons aWeapon = weaponsDA.GetWeapons(weaponName);
+            if (aWeapon != null)
+            {
+                MessageBox.Show($" Weapon Name: {aWeapon.WeaponName} \n Weapon Type: {aWeapon.WeaponType} \n Mag Size: {aWeapon.MagazineSize} \n Equip Time: {aWeapon.EquipTime} " +
+                    $"\n Reload Time: {aWeapon.ReloadTime} \n Cost:{aWeapon.WeaponCost} \n Headshot Damage: {aWeapon.HeadshotDamage} \n Torse Damage: {aWeapon.TorsoDamage} \n Leg Damage: {aWeapon.LegDamage}");
+            }
 
+            else
+            {
+                MessageBox.Show($"Invalid Weapon Name! Try Again!");
+            }
+            */
 
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            // outputs weapon table query
+            /*
+            string weaponSkinName = UsernameText.Text;
+            weapon_skins aWeaponSkin = weapon_skinsDA.GetWeaponSkins(weaponSkinName);
+            if (aWeaponSkin != null)
+            {
+                MessageBox.Show($" Weapon Name: {aWeaponSkin.WeaponSkinName} \n Recently Released: {aWeaponSkin.IsWeaponNew} \n Available in Shop: {aWeaponSkin.IsWeaponAvailable}" +
+                                $" \n Price (VP): {aWeaponSkin.WeaponSkinPrice} \n Collection Set: {aWeaponSkin.WeaponSkinSet}");
+            }
+
+            else
+            {
+                MessageBox.Show($"Invalid Weapon Skin Name! Try Again!");
+            }
+            */
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            /*
+            // outputs purchase history table query
+            string uPurchaseHistoryID = UsernameText.Text;
+            int iPurchaseHistoryID = Int32.Parse(uPurchaseHistoryID);
+
+            purchase_history aPurchaseHistory = purchase_historyDA.GetPurchaseHistory(iPurchaseHistoryID);
+            if (aPurchaseHistory != null)
+            {
+                MessageBox.Show($" Player ID: {aPurchaseHistory.PlayerID} \n Purchase ID: {aPurchaseHistory.PurchaseID} \n Purchased Item: {aPurchaseHistory.PurchasedItem}" +
+                                $" \n Cost In PHP: {aPurchaseHistory.CostInPhp} \n Paid Amount in PHP: {aPurchaseHistory.PaidAmountInPhp} \n Date Purchased: {aPurchaseHistory.DatePurchased}");
+            }
+
+            else
+            {
+                MessageBox.Show($"Invalid Purchase ID! Try Again!");
+            }
+            */
         }
     }
 }

@@ -62,9 +62,15 @@
     <Compile Include="DA Layer\agentsDA.cs" />
     <Compile Include="DA Layer\mapsDA.cs" />
     <Compile Include="DA Layer\player_statsDA.cs" />
+    <Compile Include="DA Layer\purchase_historyDA.cs" />
+    <Compile Include="DA Layer\weaponsDA.cs" />
+    <Compile Include="DA Layer\weapon_skinsDA.cs" />
     <Compile Include="Tables\agents.cs" />
     <Compile Include="Tables\maps.cs" />
     <Compile Include="Tables\player_stats.cs" />
+    <Compile Include="Tables\purchase_history.cs" />
+    <Compile Include="Tables\weapons.cs" />
+    <Compile Include="Tables\weapon_skins.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

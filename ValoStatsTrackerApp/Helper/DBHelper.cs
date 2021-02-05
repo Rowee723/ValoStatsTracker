@@ -122,5 +122,71 @@ namespace ValoStatsTrackerApp.Helper
             }
             return cmd;
         }
+
+        public static MySqlCommand GetWeaponQuery(string query, string weaponName)
+        {
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@WeaponName", weaponName);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
+
+        public static MySqlCommand GetWeaponSkinQuery(string query, string weaponSkinName)
+        {
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@WeaponSkinName", weaponSkinName);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
+
+        public static MySqlCommand GetPurchaseHistoryQuery(string query, int purchaseHistoryID)
+        {
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@PurchaseHistoryID", purchaseHistoryID);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
     }
 }
