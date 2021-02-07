@@ -173,5 +173,10 @@ namespace ValoStatsTrackerApp
         {
             Main.Content = new AgentsPage();
         }
+
+        private void MapsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MapsPage();
+        }
     }
 }

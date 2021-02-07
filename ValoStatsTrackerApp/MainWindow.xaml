@@ -23,7 +23,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="0" Content="Agents" Click="AgentsButton_OnClick"/>
-                <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="1" Content="Maps"/>
+                <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="1" Content="Maps" Click="MapsButton_OnClick"/>
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="2" Content="Player Stats" Click="PlayertStatsButton_OnClick"/>
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="3" Content="Purchases"/>
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="4" Content="Weapon Skins"/>
