@@ -60,3 +60,7 @@ D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\ValoStatsTrackerApp
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\ValoStatsTrackerApp.csproj.CopyComplete
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\ValoStatsTrackerApp.exe
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\ValoStatsTrackerApp.pdb
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.g.cs
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.g.cs
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.baml
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.baml

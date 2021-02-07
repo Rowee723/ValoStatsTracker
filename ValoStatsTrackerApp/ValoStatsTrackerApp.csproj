@@ -59,18 +59,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\AgentsPage.xaml.cs">
+      <DependentUpon>AgentsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DA Layer\agentsDA.cs" />
     <Compile Include="DA Layer\mapsDA.cs" />
     <Compile Include="DA Layer\player_statsDA.cs" />
     <Compile Include="DA Layer\purchase_historyDA.cs" />
     <Compile Include="DA Layer\weaponsDA.cs" />
     <Compile Include="DA Layer\weapon_skinsDA.cs" />
+    <Compile Include="Pages\PlayerStatsPage.xaml.cs">
+      <DependentUpon>PlayerStatsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tables\agents.cs" />
     <Compile Include="Tables\maps.cs" />
     <Compile Include="Tables\player_stats.cs" />
     <Compile Include="Tables\purchase_history.cs" />
     <Compile Include="Tables\weapons.cs" />
     <Compile Include="Tables\weapon_skins.cs" />
+    <Page Include="Pages\AgentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +95,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\PlayerStatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PD Layer\Users.cs" />
@@ -113,6 +127,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\CypherBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AgentBG.png" />
+    <Resource Include="Images\BreachBG.png" />
+    <Resource Include="Images\JettBG.png" />
+    <Resource Include="Images\OmenBG.png" />
+    <Resource Include="Images\PhoenixBG.png" />
+    <Resource Include="Images\RazeBG.png" />
+    <Resource Include="Images\ReynaBG.png" />
+    <Resource Include="Images\SageBG.png" />
+    <Resource Include="Images\SkyeBG.png" />
+    <Resource Include="Images\ViperBG.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

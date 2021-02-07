@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ValoStatsTrackerApp.DA_Layer;
 using ValoStatsTrackerApp.Helper;
+using ValoStatsTrackerApp.Pages;
 using ValoStatsTrackerApp.PD_Layer;
 using ValoStatsTrackerApp.Tables;
 
@@ -32,7 +33,7 @@ namespace ValoStatsTrackerApp
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Hello {UsernameText.Text}");
+           // MessageBox.Show($"Hello {UsernameText.Text}");
         }
 
         private void GetUserButton_Click(object sender, RoutedEventArgs e)
@@ -156,6 +157,21 @@ namespace ValoStatsTrackerApp
                 MessageBox.Show($"Invalid Purchase ID! Try Again!");
             }
             */
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void PlayertStatsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PlayerStatsPage();
+        }
+
+        private void AgentsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new AgentsPage();
         }
     }
 }
