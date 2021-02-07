@@ -64,3 +64,7 @@ C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerA
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.g.cs
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.baml
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.baml
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.g.cs
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.g.cs
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.baml
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.baml

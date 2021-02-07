@@ -36,7 +36,7 @@ namespace ValoStatsTrackerApp.Pages
                 if (PStats != null)
                 {
                     PlayerName.Text = PStats.Name;
-                    PlayerTag.Text = playerID;
+                    PlayerTag.Text = "#" + playerID;
                     RankPoints.Text = PStats.RankPoints.ToString();
                     Kills.Text = PStats.KillCount.ToString();
                     Deaths.Text = PStats.DeathCount.ToString();
