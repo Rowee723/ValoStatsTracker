@@ -33,13 +33,41 @@ namespace ValoStatsTrackerApp.Pages
 
             if (Map != null)
             {
-
+                map_name.Text = name;
+                total_matches.Text = Map.TotalMatches.ToString();
+                num_of_wins.Text = Map.AttackerWin.ToString();
+                num_of_loses.Text = Map.DefenderWin.ToString();
             }
 
             else
             {
                 MessageBox.Show($"Invalid Map! Try Again!");
             }
+        }
+
+        private void AccentButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            FindMap("Accent");
+        }
+
+        private void BindButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            FindMap("Bind");
+        }
+
+        private void HavenButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            FindMap("Haven");
+        }
+
+        private void IceboxButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            FindMap("Icebox");
+        }
+
+        private void SplitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            FindMap("Split");
         }
     }
 }

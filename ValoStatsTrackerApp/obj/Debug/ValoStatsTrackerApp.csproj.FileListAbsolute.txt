@@ -68,3 +68,5 @@ D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.g.
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.g.cs
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.baml
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.baml
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\MapsPage.g.cs
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\MapsPage.baml

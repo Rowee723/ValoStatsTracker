@@ -25,11 +25,43 @@
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
 
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="75" Height="25" Content="Accent" Click="BreachButton_OnClick"/>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="75" Height="25" Content="Bind" Click="BrimstoneButton_OnClick"/>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="75" Height="25" Content="Haven" Click="CypherButton_OnClick"/>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Width="75" Height="25" Content="Icebox" Click="JettButton_OnClick"/>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Width="75" Height="25" Content="Split" Click="OmenButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="75" Height="25" Content="Accent" Click="AccentButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="75" Height="25" Content="Bind" Click="BindButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="75" Height="25" Content="Haven" Click="HavenButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Width="75" Height="25" Content="Icebox" Click="IceboxButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Width="75" Height="25" Content="Split" Click="SplitButton_OnClick"/>
 
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.RowSpan="10" Margin="25,0,25,25">
+            <StackPanel.Background>
+                <ImageBrush x:Name="BG" ImageSource="/Images/MapsBG.jpg"/>
+            </StackPanel.Background>
+            <Grid Width="650" Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Foreground="PeachPuff" x:Name="map_name" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="Map name" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text="Total Matches"/>
+                <TextBlock Foreground="PeachPuff" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="Attackers Win"/>
+                <TextBlock Foreground="PeachPuff" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text="Defenders Win"/>
+
+                <TextBlock Foreground="PeachPuff" x:Name="total_matches" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="num_of_wins" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="num_of_loses" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
+
+            </Grid>
+        </StackPanel>
+        
     </Grid>
 </Page>
