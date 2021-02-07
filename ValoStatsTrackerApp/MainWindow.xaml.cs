@@ -179,6 +179,11 @@ namespace ValoStatsTrackerApp
             Main.Content = new WeaponsPage();
         }
 
+        private void MapsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MapsPage();
+        }
+
         private void WeaponSkinsButton_OnClick(object sender, RoutedEventArgs e)
         {
             Main.Content = new WeaponSkinsPage();

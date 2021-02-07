@@ -66,16 +66,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Foreground="IndianRed" x:Name="weapon_name" FontSize="28" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Name" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
+            <TextBlock Foreground="IndianRed" x:Name="weapon_name" FontSize="28" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text="" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
             <TextBlock Foreground="CornflowerBlue" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="Available:"/>
             <TextBlock Foreground="CornflowerBlue" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" Text="Price:"/>
             <TextBlock Foreground="CornflowerBlue" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text="New: "/>
             <TextBlock Foreground="CornflowerBlue" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="2" Text="Collection set:"/>
 
-            <TextBlock Foreground="IndianRed" x:Name="available" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="--"/>
-            <TextBlock Foreground="IndianRed" x:Name="price" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Text="--"/>
-            <TextBlock Foreground="IndianRed" x:Name="isNew" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text="--"/>
-            <TextBlock Foreground="IndianRed" x:Name="collection" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text="--" Grid.ColumnSpan="3"/>
+            <TextBlock Foreground="IndianRed" x:Name="available" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text=""/>
+            <TextBlock Foreground="IndianRed" x:Name="price" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Text=""/>
+            <TextBlock Foreground="IndianRed" x:Name="isNew" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text=""/>
+            <TextBlock Foreground="IndianRed" x:Name="collection" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text="" Grid.ColumnSpan="3"/>
 
         </Grid>
     </StackPanel>

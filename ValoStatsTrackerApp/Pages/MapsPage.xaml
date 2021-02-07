@@ -51,14 +51,14 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Foreground="PeachPuff" x:Name="map_name" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="Map name" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="map_name" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
                 <TextBlock Foreground="PeachPuff" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text="Total Matches"/>
                 <TextBlock Foreground="PeachPuff" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="Attackers Win"/>
                 <TextBlock Foreground="PeachPuff" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text="Defenders Win"/>
 
-                <TextBlock Foreground="PeachPuff" x:Name="total_matches" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="num_of_wins" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="num_of_loses" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="total_matches" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="num_of_wins" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="num_of_loses" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
 
             </Grid>
         </StackPanel>
