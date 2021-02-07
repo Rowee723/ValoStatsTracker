@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\
 ValoStatsTrackerApp
 none
 false
 DEBUG;TRACE
-D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\App.xaml
-4713528629
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\App.xaml
+51988863529
 
-24-1641257298
+25440776964
 14-430030424
-Pages\AgentsPage.xaml;MainWindow.xaml;Pages\MapsPage.xaml;Pages\PlayerStatsPage.xaml;
+Pages\AgentsPage.xaml;MainWindow.xaml;Pages\PlayerStatsPage.xaml;Pages\WeaponSkinsPage.xaml;Pages\WeaponsPage.xaml;
 
 True
 

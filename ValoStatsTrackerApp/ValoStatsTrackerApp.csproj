@@ -68,11 +68,14 @@
     <Compile Include="DA Layer\purchase_historyDA.cs" />
     <Compile Include="DA Layer\weaponsDA.cs" />
     <Compile Include="DA Layer\weapon_skinsDA.cs" />
-    <Compile Include="Pages\MapsPage.xaml.cs">
-      <DependentUpon>MapsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\PlayerStatsPage.xaml.cs">
       <DependentUpon>PlayerStatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WeaponSkinsPage.xaml.cs">
+      <DependentUpon>WeaponSkinsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WeaponsPage.xaml.cs">
+      <DependentUpon>WeaponsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tables\agents.cs" />
     <Compile Include="Tables\maps.cs" />
@@ -98,11 +101,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\MapsPage.xaml">
+    <Page Include="Pages\PlayerStatsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PlayerStatsPage.xaml">
+    <Page Include="Pages\WeaponSkinsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WeaponsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,11 +156,16 @@
     <Resource Include="Images\RazeBG.png" />
     <Resource Include="Images\ReynaBG.png" />
     <Resource Include="Images\SageBG.png" />
-    <Resource Include="Images\SkyeBG.png" />
     <Resource Include="Images\ViperBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\MapsBG.jpg" />
+    <Resource Include="Images\SkyeBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BrimstoneBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WeaponsBG.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
