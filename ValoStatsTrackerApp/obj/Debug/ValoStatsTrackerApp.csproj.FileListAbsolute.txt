@@ -64,3 +64,5 @@ C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerA
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.g.cs
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AgentsPage.baml
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.baml
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\WeaponsPage.g.cs
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\WeaponsPage.baml

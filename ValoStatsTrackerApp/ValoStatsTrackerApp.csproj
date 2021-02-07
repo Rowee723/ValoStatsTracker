@@ -71,6 +71,12 @@
     <Compile Include="Pages\PlayerStatsPage.xaml.cs">
       <DependentUpon>PlayerStatsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WeaponSkinsPage.xaml.cs">
+      <DependentUpon>WeaponSkinsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WeaponsPage.xaml.cs">
+      <DependentUpon>WeaponsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tables\agents.cs" />
     <Compile Include="Tables\maps.cs" />
     <Compile Include="Tables\player_stats.cs" />
@@ -96,6 +102,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\PlayerStatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WeaponSkinsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WeaponsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,10 +159,13 @@
     <Resource Include="Images\ViperBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\BrimsteoneBG.png" />
+    <Resource Include="Images\SkyeBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\SkyeBG.png" />
+    <Resource Include="Images\BrimstoneBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WeaponsBG.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -61,7 +61,7 @@ namespace ValoStatsTrackerApp
         private void BrimstoneButton_OnClick(object sender, RoutedEventArgs e)
         {
             FindAgent("Brimstone");
-            Uri resource = new Uri("https://raw.githubusercontent.com/Rowee723/ValoStatsTracker/Roi/ValoStatsTrackerApp/Images/BrimstonehBG.png");
+            Uri resource = new Uri("https://raw.githubusercontent.com/Rowee723/ValoStatsTracker/Roi/ValoStatsTrackerApp/Images/BrimstoneBG.png");
             BG.ImageSource = new BitmapImage(resource);
         }
 
