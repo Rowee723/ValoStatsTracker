@@ -142,8 +142,13 @@
     <Resource Include="Images\RazeBG.png" />
     <Resource Include="Images\ReynaBG.png" />
     <Resource Include="Images\SageBG.png" />
-    <Resource Include="Images\SkyeBG.png" />
     <Resource Include="Images\ViperBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BrimsteoneBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SkyeBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

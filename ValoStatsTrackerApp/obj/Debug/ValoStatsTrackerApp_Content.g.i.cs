@@ -8,15 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/agentbg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/breachbg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/jettbg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/omenbg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/phoenixbg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/razebg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/reynabg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sagebg.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/skyebg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/viperbg.png")]
 
 

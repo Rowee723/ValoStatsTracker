@@ -43,10 +43,13 @@
 
         <StackPanel Grid.Row="1" Grid.Column="2" Grid.RowSpan="10" Margin="25,0,25,25">
             <StackPanel.Background>
-                <ImageBrush x:Name="BG" ImageSource="/Images/AgentBG.png"/>
+                <ImageBrush x:Name="BG" ImageSource="/Images/AgentBG.png" Stretch="Fill"/>
             </StackPanel.Background>
             <Grid Width="650" Height="300">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -59,15 +62,16 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Type"/>
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="Skill name" Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text="First Ability"/>
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="Second Ability"/>
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text="Third Ability"/>
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text="Ultimate Skill"/>
-                <TextBlock Foreground="Gray" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Text="Cost"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Type"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="Skill name" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text="First Ability"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="Second Ability"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text="Third Ability"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text="Ultimate Skill"/>
+                <TextBlock Foreground="Gray" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Text="Cost"/>
 
                 <TextBlock Foreground="Gray" x:Name="agent_type" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Text="--"/>
                 <TextBlock Foreground="Gray" x:Name="skill1_name" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="--" Grid.ColumnSpan="2"/>
