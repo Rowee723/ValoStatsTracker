@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using ValoStatsTrackerApp.DA_Layer;
 using ValoStatsTrackerApp.Tables;
 
+
 namespace ValoStatsTrackerApp.Pages
 {
     /// <summary>
@@ -33,10 +34,15 @@ namespace ValoStatsTrackerApp.Pages
 
             if (Map != null)
             {
+                tm_name.Text = "Total Matches: ";
+                wr.Text = "Win Rate: ";
+                lr.Text = "Lose Rate: ";
+
+
                 map_name.Text = name;
                 total_matches.Text = Map.TotalMatches.ToString();
-                num_of_wins.Text = Map.AttackerWin.ToString();
-                num_of_loses.Text = Map.DefenderWin.ToString();
+                num_of_wins.Text = Math.Round(((Convert.ToDouble(Map.AttackerWin) / Convert.ToDouble(Map.TotalMatches)) * 100.00f), 2).ToString() + "%";
+                num_of_loses.Text = Math.Round(((Convert.ToDouble(Map.DefenderWin) / Convert.ToDouble(Map.TotalMatches)) * 100.00f), 2).ToString() + "%";
             }
 
             else

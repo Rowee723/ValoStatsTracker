@@ -33,6 +33,15 @@ namespace ValoStatsTrackerApp
 
             if (Agent != null)
             {
+                type.Text = "Type";
+                skill1_name.Text = "Skill Name";
+                first.Text = "First Ability";
+                second.Text = "Second Ability";
+                third.Text = "Third Ability";
+                ult.Text = "Ultimate Ability";
+                cost.Text = "Cost";
+
+
                 agent_type.Text = Agent.AgentType;
                 skill1_name.Text = Agent.FirstAbility;
                 skill2_name.Text = Agent.SecondAbility;

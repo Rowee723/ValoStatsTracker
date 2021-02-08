@@ -78,3 +78,5 @@ D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\MapsPage.baml
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PlayerStatsPage.baml
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\WeaponSkinsPage.baml
 D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\WeaponsPage.baml
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PurchaseHistoryPage.g.cs
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PurchaseHistoryPage.baml

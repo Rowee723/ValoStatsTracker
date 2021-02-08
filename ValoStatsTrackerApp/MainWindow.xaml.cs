@@ -188,5 +188,10 @@ namespace ValoStatsTrackerApp
         {
             Main.Content = new WeaponSkinsPage();
         }
+
+        private void PurchaseHistoryButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PurchaseHistoryPage();
+        }
     }
 }

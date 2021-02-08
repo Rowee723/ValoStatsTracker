@@ -30,30 +30,30 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Foreground="PeachPuff" Grid.Column="1" Grid.Row="1" 
-                 FontSize="32" Text="Input Player username"
+        <TextBlock Foreground="LightBlue" Grid.Column="1" Grid.Row="1" 
+                 FontSize="32" Text="Input Battle Tag"
                  Grid.ColumnSpan="3" Margin="0,0,0,20"/>
 
-        <TextBlock Foreground="PeachPuff" Grid.Column="1" Grid.Row="2" 
-                 Text="Username" FontFamily="Segoe UI" 
-                 FontWeight="SemiBold" HorizontalAlignment="Center" 
+        <TextBlock Foreground="LightBlue" Grid.Column="1" Grid.Row="2" 
+                 Text="BattleTag" FontFamily="Segoe UI" 
+                 FontWeight="SemiBold" HorizontalAlignment="Left" 
                  VerticalAlignment="Center"/>
 
         <TextBox x:Name="UsernameText" Grid.Column="2" 
-               Grid.Row="2" Width="150" Height="20"/>
+               Grid.Row="2" Width="100" Height="20"/>
 
         <Button x:Name="SubmitButton" Content="Submit" 
               Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Margin="10" 
               MinWidth="100" Click="SubmitButton_OnClick"/>
 
-        <TextBlock Foreground="PeachPuff" x:Name="PlayerName" Grid.Row="1" 
-                   Grid.Column="5" Text="--" FontWeight="ExtraBold"
+        <TextBlock Foreground="LightBlue" x:Name="PlayerName" Grid.Row="1" 
+                   Grid.Column="5" Text="" FontWeight="ExtraBold"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    FontSize="48"
                    />
 
-        <TextBlock Foreground="PeachPuff" x:Name="PlayerTag" Grid.Row="2" 
-                   Grid.Column="5" Text="--" FontWeight="DemiBold"
+        <TextBlock Foreground="LightGoldenrodYellow" x:Name="PlayerTag" Grid.Row="2" 
+                   Grid.Column="5" Text="" FontWeight="DemiBold"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    FontSize="28"
         />
@@ -72,19 +72,19 @@
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Foreground="PeachPuff" Grid.Row="0" Text="Rank Points: "
+                <TextBlock Foreground="PeachPuff" Grid.Row="0" Text="" x:Name="rp"
                            VerticalAlignment="Center" FontWeight="Bold"/>
-                <TextBlock Foreground="PeachPuff" Grid.Row="0" Grid.Column="1" Text="--" x:Name="RankPoints"
+                <TextBlock Foreground="PeachPuff" Grid.Row="0" Grid.Column="1" Text="" x:Name="RankPoints"
                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-                <TextBlock Foreground="PeachPuff" Grid.Row="1" Text="Total Kills: "
+                <TextBlock Foreground="PeachPuff" Grid.Row="1" Text="" x:Name="tk"
                            VerticalAlignment="Center" FontWeight="Bold"/>
-                <TextBlock Foreground="PeachPuff" Grid.Row="1" Grid.Column="1" Text="--" x:Name="Kills"
+                <TextBlock Foreground="PeachPuff" Grid.Row="1" Grid.Column="1" Text="" x:Name="Kills"
                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-                <TextBlock Foreground="PeachPuff" Grid.Row="2" Text="Total Deaths: "
+                <TextBlock Foreground="PeachPuff" Grid.Row="2" Text="" x:Name="td"
                            VerticalAlignment="Center" FontWeight="Bold"/>
-                <TextBlock Foreground="PeachPuff" Grid.Row="2" Grid.Column="1" Text="--" x:Name="Deaths"
+                <TextBlock Foreground="PeachPuff" Grid.Row="2" Grid.Column="1" Text="" x:Name="Deaths"
                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </StackPanel>

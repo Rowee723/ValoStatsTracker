@@ -32,18 +32,32 @@ namespace ValoStatsTrackerApp.Pages
 
             if (!string.IsNullOrEmpty(playerID))
             {
-                player_stats PStats = player_statsDA.GetPlayerStats(int.Parse(playerID));
-                if (PStats != null)
+                int temp;
+                if (int.TryParse(playerID, out temp))
                 {
-                    PlayerName.Text = PStats.Name;
-                    PlayerTag.Text = "#" + playerID;
-                    RankPoints.Text = PStats.RankPoints.ToString();
-                    Kills.Text = PStats.KillCount.ToString();
-                    Deaths.Text = PStats.DeathCount.ToString();
+                    player_stats PStats = player_statsDA.GetPlayerStats(int.Parse(playerID));
+
+                    if (PStats != null)
+                    {
+
+                        rp.Text = "Rank Points: ";
+                        tk.Text = "Total Kills:";
+                        td.Text = "Total Deaths: ";
+
+                        PlayerName.Text = PStats.Name;
+                        PlayerTag.Text = "#" + playerID;
+                        RankPoints.Text = PStats.RankPoints.ToString();
+                        Kills.Text = PStats.KillCount.ToString();
+                        Deaths.Text = PStats.DeathCount.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Invalid Battle Tag! Try Again!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show($"Invalid Player Tag! Try Again!");
+                    MessageBox.Show($"Invalid Battle Tag! Try Again!");
                 }
             }
         }

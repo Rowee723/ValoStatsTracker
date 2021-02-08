@@ -33,6 +33,17 @@ namespace ValoStatsTrackerApp.Pages
 
             if (Weapon != null)
             {
+                type_text.Text = "Type: ";
+                ms.Text = "Mag Size: ";
+                et.Text = "Equip Time: ";
+                rt.Text = "Reload Time: ";
+
+                c.Text = "Cost: ";
+                hd.Text = "Head Damage:";
+                td.Text = "Torso Damage: ";
+                ld.Text = "Leg Damage: ";
+
+
                 weapon_name.Text = name;
                 type.Text = Weapon.WeaponType;
                 mag_size.Text = Weapon.MagazineSize.ToString();

@@ -74,6 +74,9 @@
     <Compile Include="Pages\PlayerStatsPage.xaml.cs">
       <DependentUpon>PlayerStatsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PurchaseHistoryPage.xaml.cs">
+      <DependentUpon>PurchaseHistoryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WeaponSkinsPage.xaml.cs">
       <DependentUpon>WeaponSkinsPage.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\PlayerStatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PurchaseHistoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

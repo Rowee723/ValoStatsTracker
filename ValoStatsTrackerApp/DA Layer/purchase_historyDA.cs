@@ -18,7 +18,7 @@ namespace ValoStatsTrackerApp.DA_Layer
 
         public static purchase_history GetPurchaseHistory(int purchaseHistoryID)
         {
-            string query = "SELECT * FROM valorantdata.purchase_history WHERE purchased_id = (@PurchaseHistoryID) limit 1";
+            string query = "SELECT * FROM valorantdata.purchase_history WHERE player_id = (@PurchaseHistoryID) limit 1";
             cmd = DBHelper.GetPurchaseHistoryQuery(query, purchaseHistoryID);
             purchase_history aUser = null;
             if (cmd != null)
