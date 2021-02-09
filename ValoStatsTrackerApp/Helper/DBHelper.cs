@@ -188,5 +188,78 @@ namespace ValoStatsTrackerApp.Helper
             }
             return cmd;
         }
+
+        public static MySqlCommand UpdatePlayerStats(string query, int battleTag, int rankPoints, int kills, int deaths)
+        {
+            try
+            {
+                if(connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@BattleTag", battleTag);
+                    cmd.Parameters.AddWithValue("@RankPoints", rankPoints);
+                    cmd.Parameters.AddWithValue("@Kills", kills);
+                    cmd.Parameters.AddWithValue("@Deaths", deaths);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
+        public static MySqlCommand InsertPurchaseHistory(string query, int playerID, int purchaseID, string purchaseItem, int purchaseCost, int purchaseAmountPaid, string PurchaseDate)
+        {
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@PlayerID", playerID);
+                    cmd.Parameters.AddWithValue("@PurchaseID", purchaseID);
+                    cmd.Parameters.AddWithValue("@PurchaseItem", purchaseItem);
+                    cmd.Parameters.AddWithValue("@PurchaseCost", purchaseCost);
+                    cmd.Parameters.AddWithValue("@PurchaseAmountPaid", purchaseAmountPaid);
+                    cmd.Parameters.AddWithValue("@PurchaseDate", PurchaseDate);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
+
+        public static MySqlCommand DeletePurchaseHistory(string query, int purchaseID)
+        {
+            try
+            {
+                if (connection != null)
+                {
+                    connection.Open();
+                    cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.AddWithValue("@PurchaseID", purchaseID);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+            }
+            return cmd;
+        }
     }
 }

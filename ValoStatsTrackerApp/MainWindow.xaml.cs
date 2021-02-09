@@ -161,7 +161,7 @@ namespace ValoStatsTrackerApp
         {
             if (loggedIn)
             {
-                Main.Content = new PlayerStatsPage();
+                Main.Content = new PlayerStatsPage(admin);
             }
             else
             {
@@ -222,7 +222,7 @@ namespace ValoStatsTrackerApp
         {
             if (loggedIn) 
             { 
-                Main.Content = new PurchaseHistoryPage();
+                Main.Content = new PurchaseHistoryPage(admin);
             }
             else
             {

@@ -20,7 +20,6 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="0" Content="Agents" Click="AgentsButton_OnClick"/>
@@ -29,8 +28,8 @@
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="3" Content="Purchases" Click="PurchaseHistoryButton_OnClick"/>
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="4" Content="Skins" Click="WeaponSkinsButton_OnClick"/>
                 <Button MinWidth="100" Margin="0,0,10,0" Grid.Column="5" Content="Weapons" Click="WeaponsButton_OnClick"/>
-                <Button MinWidth="100" Margin="0,0,0,0" Grid.Column="6" Content="Admin" Click="AdminButton_OnClick"/>
-
+               <!-- <Button MinWidth="100" Margin="0,0,0,0" Grid.Column="6" Content="Admin" Click="AdminButton_OnClick"/>
+                -->
             </Grid>
             <Frame x:Name="Main" Margin="0,10,0,0" NavigationUIVisibility="Hidden"/>
 

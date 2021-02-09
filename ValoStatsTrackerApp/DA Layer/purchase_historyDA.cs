@@ -49,5 +49,16 @@ namespace ValoStatsTrackerApp.DA_Layer
             }
             return aUser;
         }
+        public static void InsertPurchase(int playerID, int purchaseID, string purchaseItem, int purchaseCost, int purchaseAmountPaid, string PurchaseDate)
+        {
+            string query = "BEGIN; INSERT INTO purchase_history VALUES ((@PlayerID), (@PurchaseID), (@PurchaseItem), (@PurchaseCost), (@PurchaseAmountPaid), DATE (@PurchaseDate)); COMMIT;";
+            cmd = DBHelper.InsertPurchaseHistory(query, playerID, purchaseID, purchaseItem, purchaseCost, purchaseAmountPaid, PurchaseDate);
+        }
+
+        public static void DeletePurchase(int purchaseID)
+        {
+            string query = "BEGIN; DELETE FROM purchase_history WHERE purchased_id = (@PurchaseID); COMMIT;";
+            cmd = DBHelper.DeletePurchaseHistory(query, purchaseID);
+        }
     }
 }

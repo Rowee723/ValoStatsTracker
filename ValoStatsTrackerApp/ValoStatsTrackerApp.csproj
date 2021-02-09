@@ -71,6 +71,12 @@
     <Compile Include="DA Layer\purchase_historyDA.cs" />
     <Compile Include="DA Layer\weaponsDA.cs" />
     <Compile Include="DA Layer\weapon_skinsDA.cs" />
+    <Compile Include="Pages\DeletePurchaseWindow.xaml.cs">
+      <DependentUpon>DeletePurchaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InsertPurchaseWindow.xaml.cs">
+      <DependentUpon>InsertPurchaseWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MapsPage.xaml.cs">
       <DependentUpon>MapsPage.xaml</DependentUpon>
     </Compile>
@@ -114,6 +120,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\DeletePurchaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InsertPurchaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MapsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
