@@ -86,3 +86,5 @@ C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerA
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\PurchaseHistoryPage.baml
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AdminPage.g.cs
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AdminPage.baml
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AdminPage.g.cs
+D:\SourceTree\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\AdminPage.baml
