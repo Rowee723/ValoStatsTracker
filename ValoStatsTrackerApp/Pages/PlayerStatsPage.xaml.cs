@@ -22,9 +22,11 @@ namespace ValoStatsTrackerApp.Pages
     /// </summary>
     public partial class PlayerStatsPage : Page
     {
-        public PlayerStatsPage()
+        bool admin = false;
+        public PlayerStatsPage(bool hasAdminAccess)
         {
             InitializeComponent();
+            admin = hasAdminAccess;
         }
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -49,6 +51,18 @@ namespace ValoStatsTrackerApp.Pages
                         RankPoints.Text = PStats.RankPoints.ToString();
                         Kills.Text = PStats.KillCount.ToString();
                         Deaths.Text = PStats.DeathCount.ToString();
+
+                        if (admin)
+                        {
+                            RankPoints_Updated.Visibility = Visibility.Visible;
+                            Kills_Updated.Visibility = Visibility.Visible;
+                            Deaths_Updated.Visibility = Visibility.Visible;
+                            UpdateButton.Visibility = Visibility.Visible;
+
+                            RankPoints_Updated.Text = PStats.RankPoints.ToString();
+                            Kills_Updated.Text = PStats.KillCount.ToString();
+                            Deaths_Updated.Text = PStats.DeathCount.ToString();
+                        }
                     }
                     else
                     {
@@ -60,6 +74,50 @@ namespace ValoStatsTrackerApp.Pages
                     MessageBox.Show($"Invalid Battle Tag! Try Again!");
                 }
             }
+        }
+
+        private void UpdateButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            string playerID = UsernameText.Text;
+            string rankPoints = RankPoints_Updated.Text;
+            string kills = Kills_Updated.Text;
+            string deaths = Deaths_Updated.Text;
+
+            if (admin)
+            {
+                if (!string.IsNullOrEmpty(playerID))
+                {
+                    int temp;
+                    if (int.TryParse(playerID, out temp))
+                    {
+                        player_statsDA.UpdatePlayerStats(int.Parse(playerID), int.Parse(rankPoints), int.Parse(kills), int.Parse(deaths));
+                        
+                        player_stats PStats = player_statsDA.GetPlayerStats(int.Parse(playerID));
+
+                        if (PStats != null)
+                        {
+                            MessageBox.Show("You updated " + PStats.Name, "Updated player", MessageBoxButton.OK);
+
+                            RankPoints.Text = PStats.RankPoints.ToString();
+                            Kills.Text = PStats.KillCount.ToString();
+                            Deaths.Text = PStats.DeathCount.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Invalid Battle Tag! Try Again!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Invalid Battle Tag! Try Again!");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Access denied");
+            }
+
         }
     }
 }

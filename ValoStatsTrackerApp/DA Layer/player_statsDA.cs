@@ -48,5 +48,11 @@ namespace ValoStatsTrackerApp.DA_Layer
             }
             return aUser;
         }
+
+        public static void UpdatePlayerStats(int battleTag, int rankPoints, int kills, int deaths)
+        {
+            string query = "BEGIN; UPDATE valorantdata.player_stats SET rank_points = (@RankPoints), num_of_kills = (@Kills), num_of_deaths = (@Deaths) WHERE battle_tag = (@BattleTag); COMMIT;";
+            cmd = DBHelper.UpdatePlayerStats(query, battleTag, rankPoints, kills, deaths);
+        }
     }
 }

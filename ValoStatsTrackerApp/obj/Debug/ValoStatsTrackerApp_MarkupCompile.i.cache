@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\App.xaml
-8407474660
+10-2055048962
 
-2848004684
+30-1571975336
 14-430030424
-Pages\AdminPage.xaml;Pages\AgentsPage.xaml;MainWindow.xaml;Pages\MapsPage.xaml;Pages\PlayerStatsPage.xaml;Pages\PurchaseHistoryPage.xaml;Pages\WeaponSkinsPage.xaml;Pages\WeaponsPage.xaml;
+Pages\AdminPage.xaml;Pages\AgentsPage.xaml;MainWindow.xaml;Pages\DeletePurchaseWindow.xaml;Pages\InsertPurchaseWindow.xaml;Pages\MapsPage.xaml;Pages\PlayerStatsPage.xaml;Pages\PurchaseHistoryPage.xaml;Pages\WeaponSkinsPage.xaml;Pages\WeaponsPage.xaml;
 
 True
 

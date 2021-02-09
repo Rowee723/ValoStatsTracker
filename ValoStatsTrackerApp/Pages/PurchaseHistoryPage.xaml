@@ -39,20 +39,22 @@
                  FontWeight="SemiBold" HorizontalAlignment="Left" 
                  VerticalAlignment="Center"/>
 
-        <TextBlock Foreground="LightBlue" Grid.Column="1" Grid.Row="3" 
-                 Text="Admin Password" FontFamily="Segoe UI" 
-                 FontWeight="SemiBold" HorizontalAlignment="Left" 
-                 VerticalAlignment="Center"/>
 
         <TextBox x:Name="PlayerBattleTagText" Grid.Column="2"
                Grid.Row="2" Width="100" Height="20"/>
 
-        <TextBox x:Name="PasswordText" Grid.Column="2"
-               Grid.Row="3" Width="100" Height="20"/>
-
         <Button x:Name="SubmitButton" Content="Submit" 
-              Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Margin="10" 
-              MinWidth="100" Click="SubmitPurchaseHisotryButton_OnClick"/>
+                Grid.Column="3" Grid.Row="2" Margin="25,10,25,10" 
+                MinWidth="20" Click="SubmitPurchaseHisotryButton_OnClick" />
+
+        <Button Visibility="Hidden" x:Name="InsertButton" Content="Insert" 
+                Grid.Column="2" Grid.Row="3" Margin="25,10,25,10" 
+                MinWidth="20" Click="InsertButton_OnClick" />
+
+        <Button Visibility="Hidden" x:Name="DeleteButton" Content="Delete" 
+                Grid.Column="3" Grid.Row="3" Margin="25,10,25,10" 
+                MinWidth="20" Click="DeleteButton_OnClick" />
+
 
         <TextBlock Foreground="LightBlue" x:Name="PlayerName" Grid.Row="1" 
                    Grid.Column="5" Text="" FontWeight="ExtraBold"
@@ -78,6 +80,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Foreground="PeachPuff" Grid.Row="0" Text="" x:Name="puid"
@@ -100,9 +105,9 @@
                 <TextBlock Foreground="PeachPuff" Grid.Row="3" Grid.Column="1" Text="" x:Name="CostInPHP"
                            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="56,15,-549,19" Width="594" RenderTransformOrigin="0.501,0.5" />
 
-                <TextBlock Foreground="PeachPuff" Grid.Row="4" Text="" x:Name="dp"
+                <TextBlock Foreground="PeachPuff" Grid.Row="1" Grid.Column="3" Text="" x:Name="dp"
                            FontWeight="Bold" Margin="0,0" HorizontalAlignment="Center"/>
-                <TextBlock Foreground="PeachPuff" Grid.Row="4" Grid.Column="1" Text="" x:Name="DatePurchased"
+                <TextBlock Foreground="PeachPuff" Grid.Row="1" Grid.Column="4" Text="" x:Name="DatePurchased"
                            VerticalAlignment="Center" HorizontalAlignment="Center" Margin="56,0,-549,34" Width="594" RenderTransformOrigin="0.501,0.5" />
 
             </Grid>
