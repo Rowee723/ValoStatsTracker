@@ -59,7 +59,7 @@ namespace ValoStatsTrackerApp.Pages
                         }
                         else
                         {
-                            MessageBox.Show($"Invalid Battle Tag! Try Again!1");
+                            MessageBox.Show($"Invalid Battle Tag! Try Again!");
                         }
                     }
                     else
