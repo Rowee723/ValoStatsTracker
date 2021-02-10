@@ -18,7 +18,7 @@ namespace ValoStatsTrackerApp.DA_Layer
 
         public static weapons GetWeapons(string weaponName)
         {
-            string query = "SELECT * FROM valorantdata.weapons WHERE name = (@WeaponName) limit 1";
+            string query = "SELECT name, CASE type WHEN 'Assault Rifles' THEN 'Primary' WHEN 'Sidearms' THEN 'Secondary' WHEN 'Sniper Rifles' THEN 'Primary' WHEN 'Shotguns' THEN 'Primary' WHEN 'Heavy Weapons' THEN 'Primary' WHEN 'SMGs' THEN 'Primary' ELSE 'NaN' END AS type,  type AS classification, magazine_size, equip_time, reload_time, cost, headshot_damage, torso_damage, leg_damage FROM weapons WHERE name = (@WeaponName) limit 1";
             cmd = DBHelper.GetWeaponQuery(query, weaponName);
             weapons aUser = null;
             if (cmd != null)
@@ -33,28 +33,23 @@ namespace ValoStatsTrackerApp.DA_Layer
 
                     string uWeaponType = dr["type"].ToString();
 
+                    string uWeaponClassification = dr["classification"].ToString();
+
                     string uMagazineSize = dr["magazine_size"].ToString();
-                    int iMagazineSize = Int32.Parse(uMagazineSize);
 
                     string uEquipTime = dr["equip_time"].ToString();
-                    double dEquipTime = Double.Parse(uEquipTime);
 
                     string uReloadTime = dr["reload_time"].ToString();
-                    double dReloadTime = Double.Parse(uReloadTime);
 
                     string uWeaponCost = dr["cost"].ToString();
-                    int iWeaponCost = Int32.Parse(uWeaponCost);
 
                     string uHeadshotDamage = dr["headshot_damage"].ToString();
-                    int iHeadshotDamage = Int32.Parse(uHeadshotDamage);
 
                     string uTorsoDamage = dr["torso_damage"].ToString();
-                    int iTorsoDamage = Int32.Parse(uTorsoDamage);
 
                     string uLegDamage = dr["leg_damage"].ToString();
-                    int iLegDamage = Int32.Parse(uLegDamage);
 
-                    aUser = new weapons(uWeaponName, uWeaponType, iMagazineSize, dEquipTime, dReloadTime, iWeaponCost, iHeadshotDamage, iTorsoDamage, iLegDamage);
+                    aUser = new weapons(uWeaponName, uWeaponType, uWeaponClassification, uMagazineSize, uEquipTime, uReloadTime, uWeaponCost, uHeadshotDamage, uTorsoDamage, uLegDamage);
                 }
             }
             return aUser;

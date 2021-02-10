@@ -33,6 +33,7 @@ namespace ValoStatsTrackerApp.Pages
 
             if (Weapon != null)
             {
+                cl.Text = "Classification: ";
                 type_text.Text = "Type: ";
                 ms.Text = "Mag Size: ";
                 et.Text = "Equip Time: ";
@@ -46,13 +47,14 @@ namespace ValoStatsTrackerApp.Pages
 
                 weapon_name.Text = name;
                 type.Text = Weapon.WeaponType;
-                mag_size.Text = Weapon.MagazineSize.ToString();
-                equip_time.Text = Weapon.EquipTime.ToString();
-                reload_time.Text = Weapon.ReloadTime.ToString();
-                cost.Text = Weapon.WeaponCost.ToString();
-                head_dmg.Text = Weapon.HeadshotDamage.ToString();
-                torso_dmg.Text = Weapon.TorsoDamage.ToString();
-                leg_dmg.Text = Weapon.LegDamage.ToString();
+                classification.Text = Weapon.WeaponClassification;
+                mag_size.Text = Weapon.MagazineSize;
+                equip_time.Text = Weapon.EquipTime;
+                reload_time.Text = Weapon.ReloadTime;
+                cost.Text = Weapon.WeaponCost;
+                head_dmg.Text = Weapon.HeadshotDamage;
+                torso_dmg.Text = Weapon.TorsoDamage;
+                leg_dmg.Text = Weapon.LegDamage;
             }
             else
             {

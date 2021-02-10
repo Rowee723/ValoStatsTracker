@@ -18,7 +18,7 @@ namespace ValoStatsTrackerApp.DA_Layer
 
         public static Users RetriveUser(string userID)
         {
-            string query = "SELECT * FROM valorantdata.player_stats WHERE battle_tag = (@userID) limit 1";
+            string query = "SELECT * FROM player_stats WHERE battle_tag = (@userID) limit 1";
             cmd = DBHelper.RunQuery(query, userID);
             Users aUser = null;
             if(cmd != null)

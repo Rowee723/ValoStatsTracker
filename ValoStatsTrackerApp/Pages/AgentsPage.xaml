@@ -71,6 +71,7 @@
                 <TextBlock Foreground="Red" x:Name="second" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text=""/>
                 <TextBlock Foreground="Red" x:Name="third" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text=""/>
                 <TextBlock Foreground="Red" x:Name="ult" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="totalCost" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Text=""/>
                 <TextBlock Foreground="Red" x:Name="cost" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Text=""/>
 
                 <TextBlock Foreground="Blue" x:Name="agent_type" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Text=""/>
@@ -83,6 +84,7 @@
                 <TextBlock Foreground="Blue" x:Name="skill2_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Text=""/>
                 <TextBlock Foreground="Blue" x:Name="skill3_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="3" Text=""/>
                 <TextBlock Foreground="Blue" x:Name="ultimate_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="Blue" x:Name="total_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
             </Grid>
         </StackPanel>
     </Grid>

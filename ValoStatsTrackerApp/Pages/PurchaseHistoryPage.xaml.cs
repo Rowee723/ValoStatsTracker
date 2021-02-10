@@ -39,7 +39,32 @@ namespace ValoStatsTrackerApp.Pages
         {
             string playerBattleTag = PlayerBattleTagText.Text;
 
+            if (!string.IsNullOrEmpty(playerBattleTag))
+            {
+                int temp;
+                if (int.TryParse(playerBattleTag, out temp))
+                {
+                    List<purchase_history> PurchaseHistory = purchase_historyDA.GetPurchaseHistory(int.Parse(playerBattleTag));
+                    if (PurchaseHistory != null)
+                    {
+                        List.Visibility = Visibility.Visible;
+                        List<Transaction> purchases = new List<Transaction>();
+                        for(int i = 0; i < PurchaseHistory.Count; i++)
+                        {
+                            string uID = PurchaseHistory[i].PurchaseID;
+                            string uDate = PurchaseHistory[i].DatePurchased;
+                            string uItem = PurchaseHistory[i].PurchasedItem;
+                            string uCost = PurchaseHistory[i].CostInPhp;
+                            purchases.Add(new Transaction() { Date = uDate, Item = uItem, Cost = uCost, ID = uID });
+                        }
 
+                        List.ItemsSource = purchases;
+                    }
+                }
+            }
+            
+
+            /*
             if (!string.IsNullOrEmpty(playerBattleTag))
             {
                 int temp;
@@ -73,6 +98,7 @@ namespace ValoStatsTrackerApp.Pages
                     MessageBox.Show($"Invalid Battle Tag! Try Again!");
                 }
             }
+            */
         }
 
         private void InsertButton_OnClick(object sender, RoutedEventArgs e)
@@ -87,5 +113,13 @@ namespace ValoStatsTrackerApp.Pages
             var window = new DeletePurchaseWindow();
             window.ShowDialog();
         }
+    }
+
+    public class Transaction
+    {
+        public string Date { get; set; }
+        public string Item { get; set; }
+        public string Cost { get; set; }
+        public string ID { get; set; }
     }
 }

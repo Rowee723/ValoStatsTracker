@@ -8,14 +8,14 @@ namespace ValoStatsTrackerApp.Tables
 {
     public class purchase_history
     {
-        private int Player_ID; //PK (not sure)
-        private int Purchase_ID; //PK (not sure)
+        private string Player_ID; //PK (not sure)
+        private string Purchase_ID; //PK (not sure)
         private string Purchased_Item;
-        private double Cost_In_Php;
-        private double Paid_Amount_In_Php;
+        private string Cost_In_Php;
+        private string Paid_Amount_In_Php;
         private string Date_Purchased;
 
-        public purchase_history(int playerId, int purchaseID, string purchasedItem, double costInPhp, double paidAmountInPhp, string datePurchased)
+        public purchase_history(string playerId, string purchaseID, string purchasedItem, string costInPhp, string paidAmountInPhp, string datePurchased)
         {
             PlayerID = playerId;
             PurchaseID = purchaseID;
@@ -25,13 +25,13 @@ namespace ValoStatsTrackerApp.Tables
             DatePurchased = datePurchased;
         }
 
-        public int PlayerID
+        public string PlayerID
         {
             get { return Player_ID; }
             set { Player_ID = value; }
         }
 
-        public int PurchaseID
+        public string PurchaseID
         {
             get { return Purchase_ID; }
             set { Purchase_ID = value; }
@@ -43,13 +43,13 @@ namespace ValoStatsTrackerApp.Tables
             set { Purchased_Item = value; }
         }
 
-        public double CostInPhp
+        public string CostInPhp
         {
             get { return Cost_In_Php; }
             set { Cost_In_Php = value; }
         }
 
-        public double PaidAmountInPhp
+        public string PaidAmountInPhp
         {
             get { return Paid_Amount_In_Php; }
             set { Paid_Amount_In_Php = value; }

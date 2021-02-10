@@ -36,7 +36,7 @@ namespace ValoStatsTrackerApp.Pages
                 int temp;
                 if (int.TryParse(battleTag, out temp))
                 {
-                    purchase_history PurchaseHistory = purchase_historyDA.GetPurchaseHistory(int.Parse(battleTag));
+                    purchase_history PurchaseHistory = purchase_historyDA.GetPurchase(int.Parse(battleTag));
                     if (PurchaseHistory != null)
                     {
                         if(PurchaseHistory.PurchaseID.ToString() == purchaseID)

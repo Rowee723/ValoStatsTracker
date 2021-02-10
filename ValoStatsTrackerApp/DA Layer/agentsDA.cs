@@ -18,7 +18,7 @@ namespace ValoStatsTrackerApp.DA_Layer
 
         public static agents GetAgents(string agentName)
         {
-            string query = "SELECT * FROM valorantdata.agents WHERE name = (@AgentName) limit 1";
+            string query = "SELECT *, (first_ability_cost + second_ability_cost) AS total_ability_cost FROM agents WHERE name = (@AgentName) limit 1";
             cmd = DBHelper.GetAgentQuery(query, agentName);
             agents aUser = null;
             if (cmd != null)
@@ -42,17 +42,16 @@ namespace ValoStatsTrackerApp.DA_Layer
                     string uUltimateAbility = dr["ultimate_ability"].ToString();
 
                     string uFirstAbilityCost = dr["first_ability_cost"].ToString();
-                    int iFirstAbilityCost = Int32.Parse(uFirstAbilityCost);
 
                     string uSecondAbilityCost = dr["second_ability_cost"].ToString();
-                    int iSecondAbilityCost = Int32.Parse(uSecondAbilityCost);
+
+                    string uTotalAbilityCost = dr["total_ability_cost"].ToString();
 
                     string uThirdAbilityChargeMethod = dr["third_ability_charge_method"].ToString();
 
                     string uUltimateAbilityPoints = dr["ultimate_ability_points"].ToString();
-                    int iUltimateAbilityPoints = Int32.Parse(uUltimateAbilityPoints);
                     
-                    aUser = new agents(uAgentName, uAgentType, uFirstAbility, uSecondAbility, uThirdAbility, uUltimateAbility, iFirstAbilityCost, iSecondAbilityCost, uThirdAbilityChargeMethod, iUltimateAbilityPoints);
+                    aUser = new agents(uAgentName, uAgentType, uFirstAbility, uSecondAbility, uThirdAbility, uUltimateAbility, uFirstAbilityCost, uSecondAbilityCost, uTotalAbilityCost, uThirdAbilityChargeMethod, uUltimateAbilityPoints);
                 }
             }
             return aUser;

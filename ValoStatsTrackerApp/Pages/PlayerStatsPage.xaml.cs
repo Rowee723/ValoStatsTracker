@@ -45,12 +45,15 @@ namespace ValoStatsTrackerApp.Pages
                         rp.Text = "Rank Points: ";
                         tk.Text = "Total Kills:";
                         td.Text = "Total Deaths: ";
+                        kd.Text = "KD Ratio: ";
 
                         PlayerName.Text = PStats.Name;
                         PlayerTag.Text = "#" + playerID;
-                        RankPoints.Text = PStats.RankPoints.ToString();
-                        Kills.Text = PStats.KillCount.ToString();
-                        Deaths.Text = PStats.DeathCount.ToString();
+                        RankPoints.Text = PStats.RankPoints;
+                        Kills.Text = PStats.KillCount;
+                        Deaths.Text = PStats.DeathCount;
+                        kdratio.Text = PStats.KDRatio;
+                        Rank.Text = PStats.RankName;
 
                         if (admin)
                         {
@@ -59,9 +62,9 @@ namespace ValoStatsTrackerApp.Pages
                             Deaths_Updated.Visibility = Visibility.Visible;
                             UpdateButton.Visibility = Visibility.Visible;
 
-                            RankPoints_Updated.Text = PStats.RankPoints.ToString();
-                            Kills_Updated.Text = PStats.KillCount.ToString();
-                            Deaths_Updated.Text = PStats.DeathCount.ToString();
+                            RankPoints_Updated.Text = PStats.RankPoints;
+                            Kills_Updated.Text = PStats.KillCount;
+                            Deaths_Updated.Text = PStats.DeathCount;
                         }
                     }
                     else
@@ -88,7 +91,7 @@ namespace ValoStatsTrackerApp.Pages
                 if (!string.IsNullOrEmpty(playerID))
                 {
                     int temp;
-                    if (int.TryParse(playerID, out temp))
+                    if (int.TryParse(playerID, out temp) && int.TryParse(rankPoints, out temp) && int.TryParse(kills, out temp) && int.TryParse(deaths, out temp))
                     {
                         player_statsDA.UpdatePlayerStats(int.Parse(playerID), int.Parse(rankPoints), int.Parse(kills), int.Parse(deaths));
                         
@@ -99,8 +102,8 @@ namespace ValoStatsTrackerApp.Pages
                             MessageBox.Show("You updated " + PStats.Name, "Updated player", MessageBoxButton.OK);
 
                             RankPoints.Text = PStats.RankPoints.ToString();
-                            Kills.Text = PStats.KillCount.ToString();
-                            Deaths.Text = PStats.DeathCount.ToString();
+                            Kills.Text = PStats.KillCount;
+                            Deaths.Text = PStats.DeathCount;
                         }
                         else
                         {
