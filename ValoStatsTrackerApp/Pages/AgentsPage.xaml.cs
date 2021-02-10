@@ -40,7 +40,7 @@ namespace ValoStatsTrackerApp
                 third.Text = "Third Ability";
                 ult.Text = "Ultimate Ability";
                 cost.Text = "Cost";
-
+                totalCost.Text = "Total Cost";
 
                 agent_type.Text = Agent.AgentType;
                 skill1_name.Text = Agent.FirstAbility;
@@ -48,10 +48,11 @@ namespace ValoStatsTrackerApp
                 skill3_name.Text = Agent.ThirdAbility;
                 ultimate_name.Text = Agent.UltimateAbility;
 
-                skill1_cost.Text = Agent.FirstAbility_Cost.ToString();
-                skill2_cost.Text = Agent.SecondAbilityCost.ToString();
+                skill1_cost.Text = Agent.FirstAbility_Cost;
+                skill2_cost.Text = Agent.SecondAbilityCost;
                 skill3_cost.Text = Agent.ThirdAbilityCharge_Method;
-                ultimate_cost.Text = Agent.UltimateAbilityPoints.ToString() + " Points";
+                ultimate_cost.Text = Agent.UltimateAbilityPoints + " Points";
+                total_cost.Text = Agent.TotalAbilityCost;
             }
             else
             {

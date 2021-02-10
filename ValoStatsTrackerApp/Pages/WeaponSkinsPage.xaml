@@ -45,16 +45,16 @@
         <StackPanel.Background>
             <ImageBrush x:Name="BG" ImageSource="/Images/WeaponsBG.jpg" Stretch="Fill"/>
         </StackPanel.Background>
-        <Grid Width="650" Height="300">
+        <Grid Width="600" Height="300">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -66,16 +66,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Foreground="Yellow" x:Name="weapon_name" FontSize="28" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text="" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
-            <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text="" x:Name="avail"/>
-                <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" Text="" x:Name="price_w"/>
-                <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text="" x:Name="new_"/>
-                <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="2" Text="" x:Name="cs"/>
+            <TextBlock Foreground="Yellow" x:Name="weapon_name" FontSize="28" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Text="" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
+            <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="" x:Name="avail"/>
+            <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="4" Text="" x:Name="price_w"/>
+            <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text="" x:Name="new_"/>
+            <TextBlock Foreground="PeachPuff" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Grid.Column="4" Text="" x:Name="cs"/>
 
-            <TextBlock Foreground="PeachPuff" x:Name="available" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text=""/>
-            <TextBlock Foreground="PeachPuff" x:Name="price" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Text=""/>
-            <TextBlock Foreground="PeachPuff" x:Name="isNew" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text=""/>
-            <TextBlock Foreground="PeachPuff" x:Name="collection" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text="" Grid.ColumnSpan="3"/>
+            <TextBlock Foreground="PeachPuff" x:Name="available" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" Text=""/>
+            <TextBlock Foreground="PeachPuff" x:Name="price" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="5" Text=""/>
+            <TextBlock Foreground="PeachPuff" x:Name="isNew" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="2" Text=""/>
+            <TextBlock Foreground="PeachPuff" x:Name="collection" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="5" Text=""/>
 
         </Grid>
     </StackPanel>

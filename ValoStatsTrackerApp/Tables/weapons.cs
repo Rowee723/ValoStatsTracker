@@ -10,19 +10,21 @@ namespace ValoStatsTrackerApp.Tables
     {
         private string Weapon_Name; //PK
         private string Weapon_Type;
-        private int Magazine_Size;
-        private double Equip_Time;
-        private double Reload_Time;
-        private int Weapon_Cost;
-        private int Headshot_Damage;
-        private int Torso_Damage;
-        private int Leg_Damage;
+        private string Weapon_Classification;
+        private string Magazine_Size;
+        private string Equip_Time;
+        private string Reload_Time;
+        private string Weapon_Cost;
+        private string Headshot_Damage;
+        private string Torso_Damage;
+        private string Leg_Damage;
 
-        public weapons(string weaponName, string weaponType, int magazineSize, double equipTime, double reloadTime,
-                       int weaponCost, int headshotDamage, int torsoDamage, int legDamage)
+        public weapons(string weaponName, string weaponType, string weaponClassification, string magazineSize, string equipTime, string reloadTime,
+                       string weaponCost, string headshotDamage, string torsoDamage, string legDamage)
         {
             WeaponName = weaponName;
             WeaponType = weaponType;
+            WeaponClassification = weaponClassification;
             MagazineSize = magazineSize;
             EquipTime = equipTime;
             ReloadTime = reloadTime;
@@ -44,39 +46,45 @@ namespace ValoStatsTrackerApp.Tables
             set { Weapon_Type = value; }
         }
 
-        public int MagazineSize
+        public string WeaponClassification
+        {
+            get { return Weapon_Classification; }
+            set { Weapon_Classification = value; }
+        }
+
+        public string MagazineSize
         {
             get { return Magazine_Size; }
             set { Magazine_Size = value; }
         }
 
-        public double EquipTime
+        public string EquipTime
         {
             get { return Equip_Time; }
             set { Equip_Time = value; }
         }
 
-        public double ReloadTime
+        public string ReloadTime
         {
             get { return Reload_Time; }
             set { Reload_Time = value; }
         }
-        public int WeaponCost
+        public string WeaponCost
         {
             get { return Weapon_Cost; }
             set { Weapon_Cost = value; }
         }
-        public int HeadshotDamage
+        public string HeadshotDamage
         {
             get { return Headshot_Damage; }
             set { Headshot_Damage = value; }
         }
-        public int TorsoDamage
+        public string TorsoDamage
         {
             get { return Torso_Damage; }
             set { Torso_Damage = value; }
         }
-        public int LegDamage
+        public string LegDamage
         {
             get { return Leg_Damage; }
             set { Leg_Damage = value; }

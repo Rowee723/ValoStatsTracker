@@ -90,3 +90,7 @@ C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerA
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\InsertPurchaseWindow.baml
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\DeletePurchaseWindow.g.cs
 C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\Pages\DeletePurchaseWindow.baml
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\bin\Debug\ValoStatsTrackerApp.exe.manifest
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\bin\Debug\ValoStatsTrackerApp.application
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\ValoStatsTrackerApp.exe.manifest
+C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\ValoStatsTrackerApp\obj\Debug\ValoStatsTrackerApp.application

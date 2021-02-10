@@ -33,14 +33,15 @@ namespace ValoStatsTrackerApp.Pages
 
             if (WeaponSkin != null)
             {
-                avail.Text = "Available In Shop: ";
+                avail.Text = "Availability: ";
                 price_w.Text = "Price: ";
-                new_.Text = "Recent Release: ";
-                cs.Text = "Collection Set: ";
+                new_.Text = "Status: ";
+                cs.Text = "Collection: ";
 
                 weapon_name.Text = name;
-                if (WeaponSkin.IsWeaponNew) isNew.Text = "Yes"; else isNew.Text = "No";
-                if(WeaponSkin.IsWeaponAvailable) available.Text = "Yes"; else available.Text = "No";
+                isNew.Text = WeaponSkin.IsWeaponNew;
+                available.Text = WeaponSkin.IsWeaponAvailable;
+
                 price.Text = WeaponSkin.WeaponSkinPrice.ToString();
                 collection.Text = WeaponSkin.WeaponSkinSet;
             }

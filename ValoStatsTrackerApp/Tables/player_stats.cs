@@ -8,22 +8,26 @@ namespace ValoStatsTrackerApp.Tables
 {
     public class player_stats
     {
-        private int Battle_Tag; //Primary key
+        private string Battle_Tag; //Primary key
         private string name;
-        private int Rank_Points;
-        private int Kill_Count;
-        private int Death_Count;
+        private string Rank_Points;
+        private string Kill_Count;
+        private string Death_Count;
+        private string KD_Ratio;
+        private string Rank_Name;
 
-        public player_stats(int battleTag, string name, int rankPoints, int killCount, int deathCount)
+        public player_stats(string battleTag, string name, string rankPoints, string killCount, string deathCount, string kdRatio, string rank)
         {
             BattleTag =  battleTag;
             Name = name;
             RankPoints = rankPoints;
             KillCount =  killCount;
             DeathCount = deathCount;
+            KDRatio = kdRatio;
+            RankName = rank;
         }
 
-        public int BattleTag
+        public string BattleTag
         {
             get { return Battle_Tag; }
             set { Battle_Tag = value; }
@@ -35,22 +39,34 @@ namespace ValoStatsTrackerApp.Tables
             set { name = value; }
         }
 
-        public int RankPoints
+        public string RankPoints
         {
             get { return Rank_Points;  }
             set { Rank_Points = value;  }
         }
 
-        public int KillCount
+        public string KillCount
         {
             get { return Kill_Count; }
             set { Kill_Count = value; }
         }
 
-        public int DeathCount
+        public string DeathCount
         {
             get { return Death_Count; }
             set { Death_Count = value; }
+        }
+
+        public string KDRatio
+        {
+            get { return KD_Ratio; }
+            set { KD_Ratio = value; }
+        }
+
+        public string RankName
+        {
+            get { return Rank_Name; }
+            set { Rank_Name = value; }
         }
     }
 }

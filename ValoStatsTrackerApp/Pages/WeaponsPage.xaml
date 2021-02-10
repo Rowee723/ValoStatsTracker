@@ -64,28 +64,32 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Foreground="Yellow" x:Name="weapon_name" FontSize="28" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text=" " Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="type_text" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text=""/>
-                <TextBlock Foreground="PeachPuff" x:Name="ms" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text=""/>
-                <TextBlock Foreground="PeachPuff" x:Name="et" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text=""/>
-                <TextBlock Foreground="PeachPuff" x:Name="rt" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Text=""/>
+
+                <TextBlock Foreground="PeachPuff" x:Name="cl" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="type_text" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="ms" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="et" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="rt" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7" Grid.Column="0" Text=""/>
                                                     
-                <TextBlock Foreground="PeachPuff" x:Name="c" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Text=""/>
-                <TextBlock Foreground="PeachPuff" x:Name="hd" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="3" Text=""/>
-                <TextBlock Foreground="PeachPuff" x:Name="td" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text=""/>
-                <TextBlock Foreground="PeachPuff" x:Name="ld" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="c" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="hd" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="td" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="PeachPuff" x:Name="ld" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7" Grid.Column="3" Text=""/>
 
-                <TextBlock Foreground="PeachPuff" x:Name="type" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="mag_size" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="equip_time" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="reload_time" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="classification" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="type" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="mag_size" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="equip_time" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="reload_time" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7" Grid.Column="1" Text=" " Grid.ColumnSpan="2"/>
 
-                <TextBlock Foreground="PeachPuff" x:Name="cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="head_dmg" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="torso_dmg" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
-                <TextBlock Foreground="PeachPuff" x:Name="leg_dmg" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="head_dmg" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="torso_dmg" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="leg_dmg" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7" Grid.Column="4" Text=" " Grid.ColumnSpan="2"/>
             </Grid>
         </StackPanel>
     </Grid>

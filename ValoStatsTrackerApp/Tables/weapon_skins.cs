@@ -9,12 +9,12 @@ namespace ValoStatsTrackerApp.Tables
     public class weapon_skins
     {
         private string Weapon_Skin_Name; //PK
-        private bool Is_Weapon_New;
-        private bool Is_Weapon_Available;
-        private int Weapon_Skin_Price;
+        private string Is_Weapon_New;
+        private string Is_Weapon_Available;
+        private string Weapon_Skin_Price;
         private string Weapon_Skin_Set;
 
-        public weapon_skins(string weaponSkinName, bool isWeaponNew, bool isWeaponAvailable, int weaponSkinPrice, string weaponSkinSet)
+        public weapon_skins(string weaponSkinName, string isWeaponNew, string isWeaponAvailable, string weaponSkinPrice, string weaponSkinSet)
         {
             WeaponSkinName = weaponSkinName;
             IsWeaponNew = isWeaponNew;
@@ -29,19 +29,19 @@ namespace ValoStatsTrackerApp.Tables
             set { Weapon_Skin_Name = value; }
         }
 
-        public bool IsWeaponNew
+        public string IsWeaponNew
         {
             get { return Is_Weapon_New; }
             set { Is_Weapon_New = value; }
         }
 
-        public bool IsWeaponAvailable
+        public string IsWeaponAvailable
         {
             get { return Is_Weapon_Available; }
             set { Is_Weapon_Available = value; }
         }
 
-        public int WeaponSkinPrice
+        public string WeaponSkinPrice
         {
             get { return Weapon_Skin_Price; }
             set { Weapon_Skin_Price = value; }

@@ -232,23 +232,31 @@ namespace ValoStatsTrackerApp
 
         private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            player_stats Player = player_statsDA.GetPlayerStats(int.Parse(battleID.Text));
             if (username.Text == "Admin" && battleID.Text == "12345")
             {
                 loggedIn = true;
                 admin = true;
                 MessageBox.Show("Successfully logged in as Admin!", "Login success", MessageBoxButton.OK);
             }
-            else if (Player != null)
+            else if (!string.IsNullOrEmpty(battleID.Text))
             {
-                if (username.Text == Player.Name)
+                player_stats Player = player_statsDA.GetPlayerStats(int.Parse(battleID.Text));
+                if (Player != null)
                 {
-                    loggedIn = true;
-                    MessageBox.Show("Successfully logged in as " + username.Text + "!", "Login success", MessageBoxButton.OK);
+                    if (username.Text == Player.Name)
+                    {
+                        loggedIn = true;
+                        MessageBox.Show("Successfully logged in as " + username.Text + "!", "Login success", MessageBoxButton.OK);
+                        LoginText.Text = "Welcome";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username", "Login error", MessageBoxButton.OK);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username", "Login error", MessageBoxButton.OK);
+                    MessageBox.Show("Battle ID not Found", "Login error", MessageBoxButton.OK);
                 }
             }
             else

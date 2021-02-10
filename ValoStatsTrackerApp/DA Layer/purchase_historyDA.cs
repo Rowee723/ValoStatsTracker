@@ -16,10 +16,44 @@ namespace ValoStatsTrackerApp.DA_Layer
         private static DataTable dt;
         private static MySqlDataAdapter sda;
 
-        public static purchase_history GetPurchaseHistory(int purchaseHistoryID)
+        public static List<purchase_history> GetPurchaseHistory(int purchaseHistoryID)
         {
-            string query = "SELECT * FROM valorantdata.purchase_history WHERE player_id = (@PurchaseHistoryID) limit 1";
+            string query = "SELECT * FROM valorantdata.purchase_history WHERE player_id = (@PurchaseHistoryID)";
             cmd = DBHelper.GetPurchaseHistoryQuery(query, purchaseHistoryID);
+
+            List<purchase_history> list = new List<purchase_history>();
+            if (cmd != null)
+            {
+                dt = new DataTable();
+                sda = new MySqlDataAdapter(cmd);
+                sda.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    string uPlayerID = dr["player_id"].ToString();
+
+                    string uPurchaseID = dr["purchased_id"].ToString();
+
+                    string uPurchasedItem = dr["purchased_item"].ToString();
+
+                    string uCostInPhp = dr["cost_in_php"].ToString();
+
+                    string uPaidAmountInPhp = dr["paid_amount_in_php"].ToString();
+
+                    string uDatePurchased = dr["date_purchased"].ToString();
+
+                    purchase_history aUser = new purchase_history(uPlayerID, uPurchaseID, uPurchasedItem, uCostInPhp, uPaidAmountInPhp, uDatePurchased);
+                    list.Add(aUser);
+                }
+            }
+
+            return list;
+        }
+
+        public static purchase_history GetPurchase(int purchaseHistoryID)
+        {
+            string query = "SELECT * FROM purchase_history WHERE player_id = (@PurchaseHistoryID) limit 1";
+            cmd = DBHelper.GetPurchaseHistoryQuery(query, purchaseHistoryID);
+
             purchase_history aUser = null;
             if (cmd != null)
             {
@@ -29,26 +63,24 @@ namespace ValoStatsTrackerApp.DA_Layer
                 foreach (DataRow dr in dt.Rows)
                 {
                     string uPlayerID = dr["player_id"].ToString();
-                    int iPlayerID = Int32.Parse(uPlayerID);
 
                     string uPurchaseID = dr["purchased_id"].ToString();
-                    int iPurchaseID = Int32.Parse(uPurchaseID);
 
                     string uPurchasedItem = dr["purchased_item"].ToString();
 
                     string uCostInPhp = dr["cost_in_php"].ToString();
-                    double dCostInPhp = Double.Parse(uCostInPhp);
 
                     string uPaidAmountInPhp = dr["paid_amount_in_php"].ToString();
-                    double iPaidAmountInPhp = Double.Parse(uPaidAmountInPhp);
 
                     string uDatePurchased = dr["date_purchased"].ToString();
 
-                    aUser = new purchase_history(iPlayerID, iPurchaseID, uPurchasedItem, dCostInPhp, iPaidAmountInPhp, uDatePurchased);
+                    aUser = new purchase_history(uPlayerID, uPurchaseID, uPurchasedItem, uCostInPhp, uPaidAmountInPhp, uDatePurchased);
+              
                 }
             }
             return aUser;
         }
+
         public static void InsertPurchase(int playerID, int purchaseID, string purchaseItem, int purchaseCost, int purchaseAmountPaid, string PurchaseDate)
         {
             string query = "BEGIN; INSERT INTO purchase_history VALUES ((@PlayerID), (@PurchaseID), (@PurchaseItem), (@PurchaseCost), (@PurchaseAmountPaid), DATE (@PurchaseDate)); COMMIT;";
