@@ -18,7 +18,7 @@ namespace ValoStatsTrackerApp.DA_Layer
 
         public static maps GetMaps(string mapName)
         {
-            string query = "SELECT * FROM valorantdata.maps WHERE name = (@MapName) limit 1";
+            string query = "SELECT * FROM maps WHERE name = (@MapName) limit 1";
             cmd = DBHelper.GetMapQuery(query, mapName);
             maps aUser = null;
             if (cmd != null)
