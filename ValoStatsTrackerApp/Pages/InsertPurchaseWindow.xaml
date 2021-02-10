@@ -1,0 +1,47 @@
+﻿<Window x:Class="ValoStatsTrackerApp.Pages.InsertPurchaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValoStatsTrackerApp.Pages"
+        mc:Ignorable="d"
+        Title="InsertPurchaseWindow" Height="450" Width="250">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Text="PlayerID/BattleID:"/>
+        <TextBox Margin="10,15,10,15" Grid.Row="0" Grid.Column="2" x:Name="playerID"/>
+
+        <TextBlock VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="PurchaseID:"/>
+        <TextBox Margin="10,15,10,15" Grid.Row="1" Grid.Column="2" x:Name="purchaseID"/>
+
+        <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="Purchase Item:"/>
+        <TextBox Margin="10,15,10,15" Grid.Row="2" Grid.Column="2" x:Name="purchaseItem"/>
+
+        <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="Cost:"/>
+        <TextBox Margin="10,15,10,15" Grid.Row="3" Grid.Column="2" x:Name="purchaseCost"/>
+
+        <TextBlock VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="Amount Paid:"/>
+        <TextBox Margin="10,15,10,15" Grid.Row="4" Grid.Column="2" x:Name="paidAmount"/>
+
+        <TextBlock VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text="Purchase Date:"/>
+        <TextBox Margin="10,15,10,15" Grid.Row="5" Grid.Column="2" x:Name="purchaseDate" Text="YYYY-MM-DD"/>
+
+        <Button Grid.Column="1" Grid.Row="6" Margin="10,15,10,15" Grid.ColumnSpan="2" Content="Insert" Click="InsertButton_OnClick"/>
+    </Grid>
+</Window>

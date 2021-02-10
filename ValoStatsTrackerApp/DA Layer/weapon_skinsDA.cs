@@ -19,7 +19,7 @@ namespace ValoStatsTrackerApp.DA_Layer
 
         public static weapon_skins GetWeaponSkins(string weaponSkinName)
         {
-            string query = "SELECT * FROM valorantdata.weapon_skins WHERE name = (@WeaponSkinName) limit 1";
+            string query = "SELECT name, IF(is_New = 0, 'Old', 'New') AS status, IF(is_Available = 1, 'Purchasable', 'Not Purchasable') AS availability, collection_set AS collection, price FROM weapon_skins WHERE name = (@WeaponSkinName) limit 1";
             cmd = DBHelper.GetWeaponSkinQuery(query, weaponSkinName);
             weapon_skins aUser = null;
             if (cmd != null)
@@ -31,18 +31,15 @@ namespace ValoStatsTrackerApp.DA_Layer
                 {
                     string uWeaponSkinName = dr["name"].ToString();
 
-                    string uIsWeaponNew = dr["is_New"].ToString();
-                    bool bIsWeaponNew = Boolean.Parse(uIsWeaponNew);
+                    string uIsWeaponNew = dr["status"].ToString();
 
-                    string uIsWeaponAvailable = dr["is_Available"].ToString();
-                    bool bIsWeaponAvailable = Boolean.Parse(uIsWeaponAvailable);
+                    string uIsWeaponAvailable = dr["availability"].ToString();
 
                     string uWeaponSkinPrice = dr["price"].ToString();
-                    int iWeaponSkinPrice = Int32.Parse(uWeaponSkinPrice);
 
-                    string uWeaponSkinSet = dr["collection_set"].ToString();
+                    string uWeaponSkinSet = dr["collection"].ToString();
 
-                    aUser = new weapon_skins(uWeaponSkinName, bIsWeaponNew, bIsWeaponAvailable, iWeaponSkinPrice, uWeaponSkinSet);
+                    aUser = new weapon_skins(uWeaponSkinName, uIsWeaponNew, uIsWeaponAvailable, uWeaponSkinPrice, uWeaponSkinSet);
                 }
             }
             return aUser;

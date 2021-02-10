@@ -14,6 +14,22 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\roitr\Documents\ProjectFiles\GDINFMG\ValoStatsTracker\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +49,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AFFFF896BEBE9B7C812B38066E8309E4C6CE88B3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ValoStatsTrackerApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -59,18 +87,53 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\AdminPage.xaml.cs">
+      <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AgentsPage.xaml.cs">
+      <DependentUpon>AgentsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DA Layer\agentsDA.cs" />
     <Compile Include="DA Layer\mapsDA.cs" />
     <Compile Include="DA Layer\player_statsDA.cs" />
     <Compile Include="DA Layer\purchase_historyDA.cs" />
     <Compile Include="DA Layer\weaponsDA.cs" />
     <Compile Include="DA Layer\weapon_skinsDA.cs" />
+    <Compile Include="Pages\DeletePurchaseWindow.xaml.cs">
+      <DependentUpon>DeletePurchaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InsertPurchaseWindow.xaml.cs">
+      <DependentUpon>InsertPurchaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MapsPage.xaml.cs">
+      <DependentUpon>MapsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlayerStatsPage.xaml.cs">
+      <DependentUpon>PlayerStatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseHistoryPage.xaml.cs">
+      <DependentUpon>PurchaseHistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WeaponSkinsPage.xaml.cs">
+      <DependentUpon>WeaponSkinsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WeaponsPage.xaml.cs">
+      <DependentUpon>WeaponsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tables\agents.cs" />
     <Compile Include="Tables\maps.cs" />
     <Compile Include="Tables\player_stats.cs" />
     <Compile Include="Tables\purchase_history.cs" />
     <Compile Include="Tables\weapons.cs" />
     <Compile Include="Tables\weapon_skins.cs" />
+    <Page Include="Pages\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AgentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +148,34 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\DeletePurchaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InsertPurchaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MapsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PlayerStatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PurchaseHistoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WeaponSkinsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WeaponsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PD Layer\Users.cs" />
@@ -109,10 +200,51 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="ValoStatsTrackerApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\CypherBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AgentBG.png" />
+    <Resource Include="Images\BreachBG.png" />
+    <Resource Include="Images\JettBG.png" />
+    <Resource Include="Images\OmenBG.png" />
+    <Resource Include="Images\PhoenixBG.png" />
+    <Resource Include="Images\RazeBG.png" />
+    <Resource Include="Images\ReynaBG.png" />
+    <Resource Include="Images\SageBG.png" />
+    <Resource Include="Images\ViperBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SkyeBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BrimstoneBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WeaponsBG.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MapsBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,91 @@
+﻿<Page x:Class="ValoStatsTrackerApp.AgentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ValoStatsTrackerApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AgentsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="75" Height="25" Content="Breach" Click="BreachButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="75" Height="25" Content="Brimstone" Click="BrimstoneButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="75" Height="25" Content="Cypher" Click="CypherButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Width="75" Height="25" Content="Jett" Click="JettButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Width="75" Height="25" Content="Omen" Click="OmenButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Width="75" Height="25" Content="Phoenix" Click="PhoenixButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="7" Grid.Column="1" Width="75" Height="25" Content="Raze" Click="RazeButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="8" Grid.Column="1" Width="75" Height="25" Content="Reyna" Click="ReynaButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="9" Grid.Column="1" Width="75" Height="25" Content="Sage" Click="SageButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="10" Grid.Column="1" Width="75" Height="25" Content="Skye" Click="SkyeButton_OnClick"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.RowSpan="10" Margin="25,0,25,25">
+            <StackPanel.Background>
+                <ImageBrush x:Name="BG" ImageSource="/Images/AgentBG.png" Stretch="Fill"/>
+            </StackPanel.Background>
+            <Grid Width="650" Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="125"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Foreground="Red" x:Name="type" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="skill_name" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="Red" x:Name="first" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="second" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="third" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="ult" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="totalCost" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="cost" FontSize="16" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Text=""/>
+
+                <TextBlock Foreground="Blue" x:Name="agent_type" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" Text=""/>
+                <TextBlock Foreground="Blue" x:Name="skill1_name" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="Blue" x:Name="skill2_name" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="Blue" x:Name="skill3_name" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="Blue" x:Name="ultimate_name" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+
+                <TextBlock Foreground="Blue" x:Name="skill1_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="Blue" x:Name="skill2_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="Blue" x:Name="skill3_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="Blue" x:Name="ultimate_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="3" Text=""/>
+                <TextBlock Foreground="Blue" x:Name="total_cost" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

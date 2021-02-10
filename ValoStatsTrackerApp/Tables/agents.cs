@@ -14,13 +14,14 @@ namespace ValoStatsTrackerApp.Tables
         private string Second_Ability;
         private string Third_Ability;
         private string Ultimate_Ability;
-        private int First_Ability_Cost;
-        private int Second_Ability_Cost;
+        private string First_Ability_Cost;
+        private string Second_Ability_Cost;
+        private string Total_Ability_Cost;
         private string Third_Ability_Charge_Method;
-        private int Ultimate_Ability_Points;
+        private string Ultimate_Ability_Points;
 
-        public agents(string agentName, string agentType, string firstAbility, string secondAbility, string thirdAbility, string ultimateAbility, 
-                      int firstAbilityCost, int secondAbilityCost, string thirdAbilityChargeMethod, int ultimateAbilityPoints)
+        public agents(string agentName, string agentType, string firstAbility, string secondAbility, string thirdAbility, string ultimateAbility,
+                      string firstAbilityCost, string secondAbilityCost, string totalAbilityCost, string thirdAbilityChargeMethod, string ultimateAbilityPoints)
         {
             AgentName = agentName;
             AgentType = agentType;
@@ -30,6 +31,7 @@ namespace ValoStatsTrackerApp.Tables
             UltimateAbility = ultimateAbility;
             FirstAbility_Cost = firstAbilityCost;
             SecondAbilityCost = secondAbilityCost;
+            TotalAbilityCost = totalAbilityCost;
             ThirdAbilityCharge_Method = thirdAbilityChargeMethod;
             UltimateAbilityPoints = ultimateAbilityPoints;
         }
@@ -70,16 +72,22 @@ namespace ValoStatsTrackerApp.Tables
             set { Ultimate_Ability = value; }
         }
 
-        public int FirstAbility_Cost
+        public string FirstAbility_Cost
         {
             get { return First_Ability_Cost; }
             set { First_Ability_Cost = value; }
         }
 
-        public int SecondAbilityCost
+        public string SecondAbilityCost
         {
             get { return Second_Ability_Cost; }
             set { Second_Ability_Cost = value; }
+        }
+
+        public string TotalAbilityCost
+        {
+            get { return Total_Ability_Cost; }
+            set { Total_Ability_Cost = value; }
         }
 
         public string ThirdAbilityCharge_Method
@@ -88,7 +96,7 @@ namespace ValoStatsTrackerApp.Tables
             set { Third_Ability_Charge_Method = value; }
         }
 
-        public int UltimateAbilityPoints
+        public string UltimateAbilityPoints
         {
             get { return Ultimate_Ability_Points; }
             set { Ultimate_Ability_Points = value; }

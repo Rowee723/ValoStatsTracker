@@ -1,0 +1,67 @@
+﻿<Page x:Class="ValoStatsTrackerApp.Pages.MapsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ValoStatsTrackerApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MapsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Width="75" Height="25" Content="Accent" Click="AccentButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Width="75" Height="25" Content="Bind" Click="BindButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Width="75" Height="25" Content="Haven" Click="HavenButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Width="75" Height="25" Content="Icebox" Click="IceboxButton_OnClick"/>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" Width="75" Height="25" Content="Split" Click="SplitButton_OnClick"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.RowSpan="10" Margin="25,0,25,25">
+            <StackPanel.Background>
+                <ImageBrush x:Name="BG" ImageSource="/Images/MapsBG.jpg"/>
+            </StackPanel.Background>
+            <Grid Width="650" Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Foreground="Yellow" x:Name="map_name" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="Red" x:Name="tm_name" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="wr" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Text=""/>
+                <TextBlock Foreground="Red" x:Name="lr" FontSize="18" FontWeight="UltraBlack" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Text=""/>
+
+                <TextBlock Foreground="PeachPuff" x:Name="total_matches" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="num_of_wins" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+                <TextBlock Foreground="PeachPuff" x:Name="num_of_loses" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Text="" Grid.ColumnSpan="2"/>
+
+            </Grid>
+        </StackPanel>
+        
+    </Grid>
+</Page>

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ValoStatsTrackerApp.DA_Layer;
 using ValoStatsTrackerApp.Helper;
+using ValoStatsTrackerApp.Pages;
 using ValoStatsTrackerApp.PD_Layer;
 using ValoStatsTrackerApp.Tables;
 
@@ -24,15 +25,13 @@ namespace ValoStatsTrackerApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool loggedIn = false;
+        bool admin = false;
+
         public MainWindow()
         {
             InitializeComponent();
             DBHelper.EstablishConnection();
-        }
-
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show($"Hello {UsernameText.Text}");
         }
 
         private void GetUserButton_Click(object sender, RoutedEventArgs e)
@@ -156,6 +155,133 @@ namespace ValoStatsTrackerApp
                 MessageBox.Show($"Invalid Purchase ID! Try Again!");
             }
             */
+        }
+
+        private void PlayertStatsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (loggedIn)
+            {
+                Main.Content = new PlayerStatsPage(admin);
+            }
+            else
+            {
+                MessageBox.Show("Login required", "Warning", MessageBoxButton.OK);
+            }
+        }
+
+        private void AgentsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (loggedIn)
+            {
+                Main.Content = new AgentsPage();
+
+            }
+            else
+            {
+                MessageBox.Show("Login required", "Warning", MessageBoxButton.OK);
+            }
+        }
+
+        private void WeaponsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (loggedIn) 
+            { 
+                Main.Content = new WeaponsPage();
+            }
+            else
+            {
+                MessageBox.Show("Login required", "Warning", MessageBoxButton.OK);
+            }
+        }
+
+        private void MapsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (loggedIn) 
+            { 
+                Main.Content = new MapsPage();
+            }
+            else
+            {
+                MessageBox.Show("Login required", "Warning", MessageBoxButton.OK);
+            }
+        }
+
+        private void WeaponSkinsButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if(loggedIn)
+            { 
+                Main.Content = new WeaponSkinsPage();
+            }
+            else
+            {
+                MessageBox.Show("Login required", "Warning", MessageBoxButton.OK);
+            }
+        }
+
+        private void PurchaseHistoryButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (loggedIn) 
+            { 
+                Main.Content = new PurchaseHistoryPage(admin);
+            }
+            else
+            {
+                MessageBox.Show("Login required", "Warning", MessageBoxButton.OK);
+            }
+        }
+
+        private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (username.Text == "Admin" && battleID.Text == "12345")
+            {
+                loggedIn = true;
+                admin = true;
+                MessageBox.Show("Successfully logged in as Admin!", "Login success", MessageBoxButton.OK);
+            }
+            else if (!string.IsNullOrEmpty(battleID.Text))
+            {
+                player_stats Player = player_statsDA.GetPlayerStats(int.Parse(battleID.Text));
+                if (Player != null)
+                {
+                    if (username.Text == Player.Name)
+                    {
+                        loggedIn = true;
+                        MessageBox.Show("Successfully logged in as " + username.Text + "!", "Login success", MessageBoxButton.OK);
+                        LoginText.Text = "Welcome";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username", "Login error", MessageBoxButton.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Battle ID not Found", "Login error", MessageBoxButton.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or battle ID!", "Login error", MessageBoxButton.OK);
+            }
+        }
+
+        private void AdminButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (loggedIn)
+            {
+                if (admin)
+                {
+                    Main.Content = new AdminPage();
+                }
+                else
+                {
+                    MessageBox.Show("Access restricted!", "Login error", MessageBoxButton.OK);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or battle ID!", "Login error", MessageBoxButton.OK);
+            }
         }
     }
 }
